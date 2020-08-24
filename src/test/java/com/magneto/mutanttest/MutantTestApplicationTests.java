@@ -52,11 +52,11 @@ class MutantTestApplicationTests {
     @Test
     void diagonalDownTest() {
         String[] lines = {
-                "GTTCGA",
+                "ATTCGA",
                 "TAGTGC",
                 "GAATTT",
                 "AGTAGT",
-                "GCGTCA",
+                "GCTTCA",
                 "TCAGCG"};
         Assertions.assertTrue(isMutant(lines));
     }
