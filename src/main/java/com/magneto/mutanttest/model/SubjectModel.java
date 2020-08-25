@@ -1,14 +1,16 @@
-package com.magneto.mutanttest.object;
+package com.magneto.mutanttest.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.magneto.mutanttest.test.dnaTest;
 
-public class Subject {
+public class SubjectModel {
     private String[] dna;
+    private boolean isMutant;
 
     @JsonCreator
-    public Subject(String[] dna) {
+    public SubjectModel(String[] dna){
         this.dna = dna;
+        this.isMutant = dnaTest.isMutant(dna);
     }
 
     public String[] getDna(){
@@ -16,6 +18,6 @@ public class Subject {
     }
 
     public boolean isMutant(){
-        return dnaTest.isMutant(dna);
+        return isMutant;
     }
 }
