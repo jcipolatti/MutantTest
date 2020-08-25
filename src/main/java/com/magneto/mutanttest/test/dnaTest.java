@@ -10,15 +10,13 @@ public class dnaTest {
             dnaMap[i] = dna[i].toCharArray();
         }
 
-        int count = 0; //Pattern pair count.
-
         //Horizontal and Vertical test
-        for (int i = 0; i < 6; i++){
+        for (int j = 0; j < 6; j++){
             int hCount = 0;
             int vCount = 0;
-            for (int j = 0; j < 5; j++){
+            for (int i = 0; i < 5; i++){
                 //Horizontal pattern check
-                hCount = (dnaMap[i][j] == dnaMap[i][j + 1])
+                hCount = (dnaMap[j][i] == dnaMap[j][i + 1])
                     ? hCount + 1
                     : 0;
                 if (hCount == 3){
@@ -26,7 +24,7 @@ public class dnaTest {
                     hCount = 0;
                 }
                 //Vertical pattern check
-                vCount = (dnaMap[j][i] == dnaMap[j + 1][i])
+                vCount = (dnaMap[i][j] == dnaMap[i + 1][j])
                         ? vCount + 1
                         : 0;
                 if (vCount == 3) {
@@ -35,142 +33,69 @@ public class dnaTest {
                 }
             }
         }
-        //Diagonal down
-        for (int k = 1; k < 3; k++){
-            count = 0;
-            int i = k;
+        //Diagonal
+        for (int l = 0; l < 3; l++){
+            int ddCount = 0;
+            int duCount = 0;
+            int i = l;
             int j = 0;
+            int k = 5;
             while (i < 5) {
-                count = (dnaMap[i][j] == dnaMap[i + 1][j + 1])
-                        ? count + 1
+                //Diagonal Down pattern check [0.0][1.0][2.0]
+                ddCount = (dnaMap[i][j] == dnaMap[i + 1][j + 1])
+                        ? ddCount + 1
                         : 0;
-                if (count == 3) {
+                if (ddCount == 3) {
                     sequencesFound++;
-                    count = 0;
+                    ddCount = 0;
                 }
-                i++;
+                //Diagonal Up pattern check [5.0][5.1][5.2]
+                duCount = (dnaMap[k][i] == dnaMap[k - 1][i + 1])
+                        ? duCount + 1
+                        : 0;
+                if (duCount == 3) {
+                    sequencesFound++;
+                    duCount = 0;
+                }
+                k--;
                 j++;
+                i++;
             }
         }
-        for (int k = 0; k < 3; k++){
-            count = 0;
+        //Diagonal Down [0.1][0.2]
+        for (int k = 1; k < 3; k++){
+            int ddCount = 0;
             int i = 0;
             int j = k;
             while (j < 5) {
-                count = (dnaMap[i][j] == dnaMap[i + 1][j + 1])
-                        ? count + 1
+                ddCount = (dnaMap[i][j] == dnaMap[i + 1][j + 1])
+                        ? ddCount + 1
                         : 0;
-                if (count == 3) {
+                if (ddCount == 3) {
                     sequencesFound++;
-                    count = 0;
+                    ddCount = 0;
                 }
                 i++;
                 j++;
             }
         }
-        //Diagonal up
-        for (int k = 1; k < 3; k++){
-            count = 0;
-            int i = k;
-            int j = 5;
-
-            while (i < 5) {
-                count = (dnaMap[j][i] == dnaMap[j - 1][i + 1])
-                        ? count + 1
-                        : 0;
-                if (count == 3) {
-                    sequencesFound++;
-                    count = 0;
-                }
-                i++;
-                j--;
-            }
-        }
-        for (int k = 3; k < 6; k++){
-            count = 0;
+        //Diagonal Up [3.0][4.0]
+        for (int k = 3; k < 5; k++){
+            int duCount = 0;
             int i = 0;
             int j = k;
             while (j > 0) {
-                count = (dnaMap[j][i] == dnaMap[j - 1][i + 1])
-                        ? count + 1
+                duCount = (dnaMap[j][i] == dnaMap[j - 1][i + 1])
+                        ? duCount + 1
                         : 0;
-                if (count == 3) {
+                if (duCount == 3) {
                     sequencesFound++;
-                    count = 0;
+                    duCount = 0;
                 }
                 i++;
                 j--;
             }
         }
-        /*//Diagonal up
-        for (int k = 3; k < 6; k++){
-            count = 0;
-            int i = k;
-            int j = 0;
-            while (i > 0) {
-                count = (dnaMap[i][j] == dnaMap[i - 1][j + 1])
-                        ? count + 1
-                        : 0;
-                if (count == 3) {
-                    sequencesFound++;
-                    count = 0;
-                }
-                i--;
-                j++;
-            }
-        }
-        for (int k = 1; k < 3; k++){
-            count = 0;
-            int i = 5;
-            int j = k;
-            while (j < 5) {
-                count = (dnaMap[i][j] == dnaMap[i - 1][j + 1])
-                        ? count + 1
-                        : 0;
-
-                if (count == 3) {
-                    sequencesFound++;
-                    count = 0;
-                }
-                i--;
-                j++;
-            }
-        }
-
-        //Diagonal down
-        for (int k = 1; k < 3; k++){
-            count = 0;
-            int i = k;
-            int j = 0;
-            while (i < 5) {
-                count = (dnaMap[i][j] == dnaMap[i + 1][j + 1])
-                        ? count + 1
-                        : 0;
-                if (count == 3) {
-                    sequencesFound++;
-                    count = 0;
-                }
-                i++;
-                j++;
-            }
-        }
-        for (int k = 0; k < 3; k++){
-            count = 0;
-            int i = 0;
-            int j = k;
-            while (j < 5) {
-                count = (dnaMap[i][j] == dnaMap[i + 1][j + 1])
-                        ? count + 1
-                        : 0;
-
-                if (count == 3) {
-                    sequencesFound++;
-                    count = 0;
-                }
-                i++;
-                j++;
-            }
-        }*/
 
         return sequencesFound >= 2;
     }

@@ -42,7 +42,7 @@ class MutantTestApplicationTests {
         String[] lines = {
                 "ATGCGA",
                 "CAGGGC",
-                "TTGTCG",
+                "TAGTCG",
                 "AGTCGC",
                 "GACTCG",
                 "TCTTTG"};
