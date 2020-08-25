@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.Pattern;
 
 @Entity
-public class SubjectModel {
+public class DnaModel {
 
     @Id
     @Pattern(regexp = "[ACTG]+")
@@ -17,7 +17,7 @@ public class SubjectModel {
     private boolean isMutant;
 
     @JsonCreator
-    public SubjectModel(String[] dna){
+    public DnaModel(String[] dna){
         StringBuffer sf = new StringBuffer();
         for(int i = 0; i < dna.length; i++) {
             sf.append(dna[i]);
@@ -27,7 +27,7 @@ public class SubjectModel {
         this.isMutant = dnaTest.isMutant(dna);
     }
 
-    public SubjectModel() {
+    public DnaModel() {
 
     }
 
