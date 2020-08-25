@@ -3,17 +3,27 @@ package com.magneto.mutanttest.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.magneto.mutanttest.test.dnaTest;
 
+import javax.validation.constraints.Pattern;
+
 public class SubjectModel {
-    private String[] dna;
+
+    @Pattern(regexp = "[ACTG]+")
+    private String dna;
+
     private boolean isMutant;
 
     @JsonCreator
     public SubjectModel(String[] dna){
-        this.dna = dna;
+        StringBuffer sf = new StringBuffer();
+        for(int i = 0; i < dna.length; i++) {
+            sf.append(dna[i]);
+        }
+
+        this.dna = sf.toString();
         this.isMutant = dnaTest.isMutant(dna);
     }
 
-    public String[] getDna(){
+    public String getDna(){
         return dna;
     }
 

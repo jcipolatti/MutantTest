@@ -7,21 +7,16 @@ import javax.persistence.Id;
 public class SubjectEntity {
 
     @Id
-    private String dnaChain;
+    private String dna;
 
     private boolean isMutant;
 
     public SubjectEntity() {
     }
 
-    public SubjectEntity(String[] dna, boolean isMutant){
+    public SubjectEntity(String dna, boolean isMutant){
 
-        StringBuffer dnaChain = new StringBuffer();
-        for(int i = 0; i < dna.length; i++) {
-            dnaChain.append(dna[i]);
-        }
-
-        this.dnaChain = dnaChain.toString();
+        this.dna = dna;
         this.isMutant = isMutant;
 
     }

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 public class SubjectController {
 
@@ -20,7 +22,7 @@ public class SubjectController {
     }
 
     @PostMapping("/mutant/")
-    public ResponseEntity postMutant(@RequestBody SubjectModel subjectModel){
+    public ResponseEntity postMutant(@Valid @RequestBody SubjectModel subjectModel){
 
         SubjectEntity subjectEntity = new SubjectEntity(subjectModel.getDna(), subjectModel.isMutant());
         subjectRepository.save(subjectEntity);

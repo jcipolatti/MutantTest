@@ -1,7 +1,6 @@
 package com.magneto.mutanttest.test;
 
 public class dnaTest {
-    @SuppressWarnings("DuplicatedCode")
     public static boolean isMutant(String[] dna) {
         char[][] dnaMap = new char[6][6];
         int sequencesFound = 0;
@@ -10,7 +9,7 @@ public class dnaTest {
             dnaMap[i] = dna[i].toCharArray();
         }
 
-        //Horizontal and Vertical test
+        //Horizontal and Vertical
         for (int j = 0; j < 6; j++){
             int hCount = 0;
             int vCount = 0;
@@ -33,6 +32,7 @@ public class dnaTest {
                 }
             }
         }
+
         //Diagonal
         for (int l = 0; l < 3; l++){
             int ddCount = 0;
