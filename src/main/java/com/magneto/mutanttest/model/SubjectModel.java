@@ -2,11 +2,15 @@ package com.magneto.mutanttest.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.magneto.mutanttest.test.dnaTest;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import javax.validation.constraints.Pattern;
 
+@Entity
 public class SubjectModel {
 
+    @Id
     @Pattern(regexp = "[ACTG]+")
     private String dna;
 
@@ -21,6 +25,10 @@ public class SubjectModel {
 
         this.dna = sf.toString();
         this.isMutant = dnaTest.isMutant(dna);
+    }
+
+    public SubjectModel() {
+
     }
 
     public String getDna(){

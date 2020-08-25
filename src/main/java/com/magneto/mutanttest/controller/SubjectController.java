@@ -1,6 +1,5 @@
 package com.magneto.mutanttest.controller;
 
-import com.magneto.mutanttest.entity.SubjectEntity;
 import com.magneto.mutanttest.model.SubjectModel;
 import com.magneto.mutanttest.repository.SubjectRepository;
 import org.springframework.http.HttpStatus;
@@ -24,8 +23,7 @@ public class SubjectController {
     @PostMapping("/mutant/")
     public ResponseEntity postMutant(@Valid @RequestBody SubjectModel subjectModel){
 
-        SubjectEntity subjectEntity = new SubjectEntity(subjectModel.getDna(), subjectModel.isMutant());
-        subjectRepository.save(subjectEntity);
+        subjectRepository.save(subjectModel);
 
         return (subjectModel.isMutant())
                 ? ResponseEntity.status(HttpStatus.OK).build()
