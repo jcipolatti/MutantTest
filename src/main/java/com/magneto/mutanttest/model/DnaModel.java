@@ -27,13 +27,9 @@ public class DnaModel {
         this.isMutant = dnaTest.isMutant(dna);
     }
 
-    public DnaModel() {
+    public DnaModel() { }
 
-    }
-
-    public String getDna(){
-        return dna;
-    }
+    public String getDna() { return dna; }
 
     public boolean isMutant(){
         return isMutant;

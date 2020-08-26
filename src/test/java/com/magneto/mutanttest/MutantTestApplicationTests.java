@@ -8,8 +8,6 @@ import static com.magneto.mutanttest.test.dnaTest.isMutant;
 
 @SpringBootTest
 class MutantTestApplicationTests {
-
-    @Test
     void contextLoads() {
     }
 
@@ -59,5 +57,10 @@ class MutantTestApplicationTests {
                 "GCTTCA",
                 "TCAGCG"};
         Assertions.assertTrue(isMutant(lines));
+    }
+
+    @Test
+    public void coverageForAppMain() {
+        MutantTestApplication.main(new String[] {});
     }
 }
