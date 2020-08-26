@@ -65,18 +65,18 @@ public class dnaTest {
         //Diagonal Down [0.1][0.2]
         for (int k = 1; k < 3; k++){
             int ddCount = 0;
-            int i = 0;
-            int j = k;
-            while (j < 5) {
-                ddCount = (dnaMap[i][j] == dnaMap[i + 1][j + 1])
+            int j = 0;
+            int i = k;
+            while (i < 5) {
+                ddCount = (dnaMap[j][i] == dnaMap[j + 1][i + 1])
                         ? ddCount + 1
                         : 0;
                 if (ddCount == 3) {
                     sequencesFound++;
                     ddCount = 0;
                 }
-                i++;
                 j++;
+                i++;
             }
         }
         //Diagonal Up [3.0][4.0]
