@@ -115,7 +115,7 @@ public class MutantTestControllerTest {
         Random r = new Random();
         Long mutantCount = r.nextLong() & Long.MAX_VALUE;
         Long humanCount = r.nextLong() & Long.MAX_VALUE;
-        Long ratio = mutantCount / humanCount;
+        Double ratio = (double) mutantCount / (double) humanCount;
 
         Mockito.when(dnaRepository.getMutantCount()).thenReturn(mutantCount);
         Mockito.when(dnaRepository.getHumanCount()).thenReturn(humanCount);
