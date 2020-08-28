@@ -6,13 +6,13 @@ public class StatsModel {
 
     private final Long countMutantDna;
     private final Long countHumanDna;
-    private final Integer ratio;
+    private final Double ratio;
 
     public StatsModel(Long countMutantDna, Long countHumanDna){
         this.countMutantDna = countMutantDna;
         this.countHumanDna = countHumanDna;
         this.ratio = (countHumanDna > 0)
-            ? (int) (countMutantDna / countHumanDna)
+            ? (double) countMutantDna / (double) countHumanDna
             : null;
     }
 
@@ -27,7 +27,7 @@ public class StatsModel {
     }
 
     @JsonProperty("ratio")
-    public Integer getRatio() {
+    public Double getRatio() {
         return ratio;
     }
 }
