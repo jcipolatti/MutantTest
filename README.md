@@ -1,10 +1,9 @@
 # MutantTest ([gcloud](https://github.com/jcipolatti/MutantTest/tree/gcloud))
 
 ## Descripción:
-Este branch contiene el código de la versión productiva de la API. Incorpora plugins, configuraciones de conexión de base de datos y escalamiento de instancias requeridos por Google.
+Este branch contiene el código de la versión productiva de la API. Incorpora plugins para las configuraciones de conexión de base de datos `MySql 8.0` y escalamiento de instancias de ejecución en `Google Cloud`.
 
 ## Observaciones:
-La versión de este branch ([gcloud](https://github.com/jcipolatti/MutantTest/tree/gcloud)) opera con una base de datos `MySql 8.0` alojada en `Google Cloud`.
 Se puede ejecutar siguiendo el mismo instructivo de ejecución del [/README.md](https://github.com/jcipolatti/MutantTest/blob/master/README.md) del branch [master](https://github.com/jcipolatti/MutantTest)
 
 # Importante:
