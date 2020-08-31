@@ -14,7 +14,7 @@ Si se ejecuta localmente la API desde este branch ([gcloud](https://github.com/j
 
 `GET:` http://localhost:8080/stats
 
-Pero se estará trabajando directamente con la misma base de datos que operan las URL publicadas en la nube:
+Pero se estará trabajando con la misma base de datos que operan las URL publicadas en la nube:
 
 `POST:` https://keen-genius-287023.rj.r.appspot.com/mutant/
 
