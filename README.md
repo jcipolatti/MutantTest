@@ -13,6 +13,16 @@ En caso de utilizar la versión de IntelliJ Community, u otro IDE, la API puede 
 `mvn springboot:run`
 ---
 
+3. Ya se puede acceder al servicio a través de localhost 
+
+   `POST:` http://localhost:8080/mutant/
+   
+   ![Postman-Mutant](images/Postman-Mutant.png)
+   
+   `GET:`http://localhost:8080/stats
+      
+   ![Postman-Stats](images/Postman-Stats.png)
+
 3. Ejecutar test con cobertura de código de IntelliJ:
 
    ![IntelliJ-RunAllTestWithCoverage](images/IntelliJ-RunAllTestWithCoverage.png)
