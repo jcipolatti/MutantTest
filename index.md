@@ -77,7 +77,7 @@ github).
 - IDE: IntelliJ IDEA 2020 ULTIMATE
 - Cloud Computing: Google App Engine
 - DataBase: H2 / MySQL 8.0
-- Repositorio Git: https://github.com/jcipolatti/MutantTest.git
+- Repositorio Git: github.com/jcipolatti/MutantTest.git
 - README: [/README.md](https://github.com/jcipolatti/MutantTest/blob/master/README.md)
 
 ### Nivel 1:
@@ -85,7 +85,7 @@ github).
 Método solicitado: [/src/main/java/com/magneto/mutanttest/test/dnaTest.java](https://github.com/jcipolatti/MutantTest/blob/master/src/main/java/com/magneto/mutanttest/test/dnaTest.java)
 
 ### Nivel 2:
-URL: https://keen-genius-287023.rj.r.appspot.com/mutant/
+URL: keen-genius-287023.rj.r.appspot.com/mutant/
 
 ### Nivel 3:
-URL: https://keen-genius-287023.rj.r.appspot.com/stats
+URL: keen-genius-287023.rj.r.appspot.com/stats
