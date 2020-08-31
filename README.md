@@ -9,7 +9,9 @@ El servicio fue desarrollado con el IDE IntelliJ 2020 ULTIMATE por su integraci�
    ![IntelliJ-RunAllTestWithCoverage](images/IntelliJ-RunMutantTestApplication.png)
 
    ***Nota:***
-   En caso de utilizar IntelliJ COMMUNITY, u otro IDE, la API puede ser ejecutada a través del siguiente comando Maven: `mvn springboot:run`
+   En caso de utilizar IntelliJ COMMUNITY, u otro IDE, la API puede ser ejecutada a través del siguiente comando Maven: 
+   
+   `mvn springboot:run`
 
 3. Ya se puede acceder al servicio a través de localhost (Ejemplos de ejecución con Postman):
 
