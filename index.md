@@ -45,7 +45,7 @@ siguiente formato:
 ```
 POST → /mutant/
 {
-  “dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+  "dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
 }
 ```
 En caso de verificar un mutante, debería devolver un `HTTP 200-OK`, en caso contrario un
@@ -56,7 +56,7 @@ Anexar una base de datos, la cual guarde los ADN’s verificados con la API.
 Solo 1 registro por ADN.
 Exponer un servicio extra “/stats” que devuelva un Json con las estadísticas de las
 verificaciones de ADN: 
-```json
+```
 {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}
 ```
 Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1
@@ -76,8 +76,16 @@ github).
 - Framework base: SpringBoot
 - IDE: IntelliJ IDEA 2020 ULTIMATE
 - Cloud Computing: Google App Engine
-- DataBase: MySQL 8.0
+- DataBase: H2 / MySQL 8.0
+- Repositorio Git: https://github.com/jcipolatti/MutantTest.git
+- README: [MutantTest/blob/master/README.md](https://github.com/jcipolatti/MutantTest/blob/master/README.md)
 
 ### Nivel 1:
 
-Método solicitado: [/src/main/java/com/magneto/mutanttest/test/dnaTest.java](https://github.com/jcipolatti/MutantTest/blob/master/src/main/java/com/magneto/mutanttest/test/dnaTest.java)
+Método solicitado: [MutantTest/src/main/java/com/magneto/mutanttest/test/dnaTest.java](https://github.com/jcipolatti/MutantTest/blob/master/src/main/java/com/magneto/mutanttest/test/dnaTest.java)
+
+### Nivel 2:
+URL: http://keen-genius-287023.rj.r.appspot.com/mutant/
+
+### Nivel 3:
+URL: https://keen-genius-287023.rj.r.appspot.com/stats
