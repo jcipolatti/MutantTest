@@ -1,4 +1,4 @@
-## Examen Mercadolibre
+# Mutant Test
 
 Magneto quiere reclutar la mayor cantidad de mutantes para poder luchar
 contra los X-Men.
@@ -7,7 +7,7 @@ humano es mutante basándose en su secuencia de ADN.
 Para eso te ha pedido crear un programa con un método o función con la siguiente firma (En
 alguno de los siguiente lenguajes: Java / Golang / C-C++ / Javascript (node) / Python / Ruby):
 
-**`boolean isMutant(String[] dna); // Ejemplo Java`**                      
+   **boolean isMutant(String[] dna); // Ejemplo Java**                      
 
 En donde recibirás como parámetro un array de Strings que representan cada fila de una tabla
 de (NxN) con la secuencia del ADN. Las letras de los Strings solo pueden ser: (A,T,C,G), las
@@ -27,45 +27,38 @@ Sabrás si un humano es mutante, si encuentras más de una secuencia de cuatro l
 iguales, de forma oblicua, horizontal o vertical.
 Ejemplo (Caso mutante):
                         
-**`String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};`**
+   **String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};**
                         
 En este caso el llamado a la función isMutant(dna) devuelve “true”.
 Desarrolla el algoritmo de la manera más eficiente posible
 
-## Welcome to GitHub Pages
+## Desafíos:
+### Nivel 1:
+Programa (en cualquier lenguaje de programación) que cumpla con el método pedido por
+Magneto.
+### Nivel 2:
+Crear una API REST, hostear esa API en un cloud computing libre (Google App Engine,
+Amazon AWS, etc), crear el servicio “/mutant/” en donde se pueda detectar si un humano es
+mutante enviando la secuencia de ADN mediante un HTTP POST con un Json el cual tenga el
+siguiente formato:
+POST → /mutant/
+{
+“dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+}
+En caso de verificar un mutante, debería devolver un HTTP 200-OK, en caso contrario un
+403-Forbidden
+### Nivel 3:
+Anexar una base de datos, la cual guarde los ADN’s verificados con la API.
+Solo 1 registro por ADN.
+Exponer un servicio extra “/stats” que devuelva un Json con las estadísticas de las
+verificaciones de ADN: `{“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}`
+Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1
+millón de peticiones por segundo).
+Test-Automáticos, Code coverage > 80%.
 
-You can use the [editor on GitHub](https://github.com/jcipolatti/MutantTest/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Entregar:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jcipolatti/MutantTest/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* Código Fuente (Para Nivel 2 y 3: En repositorio github).
+* Instrucciones de cómo ejecutar el programa o la API. (Para Nivel 2 y 3: En README de
+github).
+* URL de la API (Nivel 2 y 3)
