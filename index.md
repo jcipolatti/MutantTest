@@ -13,7 +13,7 @@ En donde recibirás como parámetro un array de Strings que representan cada fil
 de (NxN) con la secuencia del ADN. Las letras de los Strings solo pueden ser: (A,T,C,G), las
 cuales representa cada base nitrogenada del ADN.
 
-```markdown
+```
  A  T  G  C  G  A   [A] T  G  C [G] A
  C  A  G  T  G  C    C [A] G  T [G] C
  C  A  G  T  G  C    T  T [A] T [G] T
@@ -33,6 +33,7 @@ En este caso el llamado a la función isMutant(dna) devuelve “true”.
 Desarrolla el algoritmo de la manera más eficiente posible
 
 ## Desafíos:
+
 ### Nivel 1:
 Programa (en cualquier lenguaje de programación) que cumpla con el método pedido por
 Magneto.
@@ -58,7 +59,19 @@ Test-Automáticos, Code coverage > 80%.
 
 ## Entregar:
 
-* Código Fuente (Para Nivel 2 y 3: En repositorio github).
-* Instrucciones de cómo ejecutar el programa o la API. (Para Nivel 2 y 3: En README de
+- Código Fuente (Para Nivel 2 y 3: En repositorio github).
+- Instrucciones de cómo ejecutar el programa o la API. (Para Nivel 2 y 3: En README de
 github).
-* URL de la API (Nivel 2 y 3)
+- URL de la API (Nivel 2 y 3)
+
+## Entrega:
+
+- Lenguaje de programación: Java 11
+- Framework base: SpringBoot
+- IDE: IntelliJ IDEA 2020 ULTIMATE
+- Cloud Computing: Google App Engine
+- DataBase: MySQL 8.0
+
+### Nivel 1:
+
+Método solicitado: [/src/main/java/com/magneto/mutanttest/test/dnaTest.java](https://github.com/jcipolatti/MutantTest/blob/master/src/main/java/com/magneto/mutanttest/test/dnaTest.java)
