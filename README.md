@@ -13,7 +13,7 @@ En caso de utilizar IntelliJ COMMUNITY, u otro IDE, la API puede ser ejecutada a
 `mvn springboot:run`
 ---
 
-3. Ya se puede acceder al servicio a través de localhost 
+3. Ya se puede acceder al servicio a través de localhost (Ejemplos de ejecución con Postman):
 
    `POST:` http://localhost:8080/mutant/
    
@@ -23,9 +23,11 @@ En caso de utilizar IntelliJ COMMUNITY, u otro IDE, la API puede ser ejecutada a
       
    ![Postman-Stats](images/Postman-Stats.png)
 
-3. Ejecutar tests con cobertura de código de IntelliJ:
+4. Ejecutar tests con cobertura de código de IntelliJ:
 
    ![IntelliJ-RunAllTestWithCoverage](images/IntelliJ-RunAllTestWithCoverage.png)
+   
+## Observaciones:
+La versión de este branch (master) opera con una base de datos H2 en memoria por lo que los valores alojados en la base de datos se perderán al detener la instancia de ejecución de la API.
 
-
-  
+Esta versión está preparada para realizar pruebas locales independientes, la versión publicada se encuentra en el branch [gcloud](https://github.com/jcipolatti/MutantTest/tree/gcloud)
