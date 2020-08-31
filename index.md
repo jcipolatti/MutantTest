@@ -78,14 +78,14 @@ github).
 - Cloud Computing: Google App Engine
 - DataBase: H2 / MySQL 8.0
 - Repositorio Git: https://github.com/jcipolatti/MutantTest.git
-- README: [MutantTest/blob/master/README.md](https://github.com/jcipolatti/MutantTest/blob/master/README.md)
+- README: [/README.md](https://github.com/jcipolatti/MutantTest/blob/master/README.md)
 
 ### Nivel 1:
 
-Método solicitado: [MutantTest/src/main/java/com/magneto/mutanttest/test/dnaTest.java](https://github.com/jcipolatti/MutantTest/blob/master/src/main/java/com/magneto/mutanttest/test/dnaTest.java)
+Método solicitado: [/src/main/java/com/magneto/mutanttest/test/dnaTest.java](https://github.com/jcipolatti/MutantTest/blob/master/src/main/java/com/magneto/mutanttest/test/dnaTest.java)
 
 ### Nivel 2:
-URL: http://keen-genius-287023.rj.r.appspot.com/mutant/
+URL: https://keen-genius-287023.rj.r.appspot.com/mutant/
 
 ### Nivel 3:
 URL: https://keen-genius-287023.rj.r.appspot.com/stats
