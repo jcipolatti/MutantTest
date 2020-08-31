@@ -9,6 +9,7 @@ El servicio fue desarrollado con el IDE IntelliJ 2020 ULTIMATE por su integraci�
    ![IntelliJ-RunAllTestWithCoverage](images/IntelliJ-RunMutantTestApplication.png)
 
 ---
+***Nota:***
 En caso de utilizar IntelliJ COMMUNITY, u otro IDE, la API puede ser ejecutada a través del siguiente comando Maven:
 `mvn springboot:run`
 ---
@@ -28,6 +29,11 @@ En caso de utilizar IntelliJ COMMUNITY, u otro IDE, la API puede ser ejecutada a
    ![IntelliJ-RunAllTestWithCoverage](images/IntelliJ-RunAllTestWithCoverage.png)
    
 ## Observaciones:
-La versión de este branch (master) opera con una base de datos H2 en memoria por lo que los valores alojados en la base de datos se perderán al detener la instancia de ejecución de la API.
+La versión de este branch (master) opera con una base de datos H2 en memoria por lo que los valores guardados se perderán al detener la instancia de ejecución de la API.
 
 Esta versión está preparada para realizar pruebas locales independientes, la versión publicada se encuentra en el branch [gcloud](https://github.com/jcipolatti/MutantTest/tree/gcloud)
+
+---
+***Importante:***
+El branch [gcloud](https://github.com/jcipolatti/MutantTest/tree/gcloud) almacena el código productivo de la API, no se aventure sin antes leer atentamente el [/README.md](https://github.com/jcipolatti/MutantTest/blob/gcloud/README.md) del branch.
+---
