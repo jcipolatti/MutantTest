@@ -6,12 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 public class DnaModel {
 
     @Id
     @Pattern(regexp = "[ACTG]+")
+    @Size(max = 36, min = 36)
     private String dna;
 
     private boolean isMutant;
